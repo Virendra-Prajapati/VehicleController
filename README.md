@@ -1,81 +1,71 @@
-# UNITY VEHICLE CONTROLLER WITH AI CONTROL
+# Unity Vehicle Controller with AI Control
 
-## SUMMARY
+## Summary
 
-THIS UNITY-BASED VEHICLE CONTROLLER SCRIPT UTILIZES UNITY'S PHYSICS ENGINE TO SIMULATE REALISTIC VEHICLE DYNAMICS, OFFERING A VERSATILE SOLUTION FOR RACING GAMES, DRIVING SIMULATORS, OR ANY GAME THAT REQUIRES VEHICLE MOVEMENT. THE CONTROLLER SUPPORTS BOTH **PLAYER** AND **AI** VEHICLE CONTROL, WITH ADVANCED FEATURES LIKE DRIFTING, BOOSTING, REALISTIC STEERING, DECELERATION, OBSTACLE DETECTION, AND WAYPOINT-BASED NAVIGATION.
+This Unity-based vehicle controller script uses Unity's physics engine to simulate realistic vehicle dynamics, offering a versatile solution for racing games, driving simulators, or any game that requires vehicle movement. The controller supports both **player** and **AI** vehicle control, with advanced features like drifting, boosting, realistic steering, deceleration, obstacle detection, and waypoint-based navigation.
 
-## KEY FEATURES
+## Key Features
 
-- **ADVANCED DRIFTING & BOOSTING**: DRIFT YOUR CAR THROUGH CORNERS AND BOOST YOUR SPEED FOR AN ADRENALINE-FUELED RACING EXPERIENCE.
-- **REALISTIC STEERING & DECELERATION**: ACHIEVE SMOOTH AND RESPONSIVE VEHICLE CONTROL WITH REAL-WORLD PHYSICS.
-- **AI CONTROL WITH OBSTACLE DETECTION & AVOIDANCE**: AI VEHICLES CAN DETECT OBSTACLES IN THEIR PATH AND ADJUST THEIR MOVEMENT ACCORDINGLY, ENSURING DYNAMIC AND INTELLIGENT BEHAVIOR ON THE TRACK.
-- **AI NAVIGATION VIA WAYPOINTS**: AI-CONTROLLED VEHICLES FOLLOW WAYPOINTS, NAVIGATING THE TRACK SMOOTHLY AND WITH DECISION-MAKING ABILITY TO AVOID OBSTACLES.
-- **PLAYER CONTROL VIA UNITY INPUT SYSTEM**: FULLY SUPPORTS UNITY’S DEFAULT INPUT SYSTEM, OFFERING RESPONSIVE CONTROL OVER YOUR VEHICLE.
+- **Advanced drifting & boosting**: Drift your car through corners and boost your speed for an adrenaline-fueled racing experience.
+- **Realistic steering & deceleration**: Achieve smooth and responsive vehicle control with real-world physics.
+- **AI control with obstacle detection & avoidance**: AI vehicles can detect obstacles in their path and adjust their movement accordingly, ensuring dynamic and intelligent behavior on the track.
+- **AI navigation via waypoints**: AI-controlled vehicles follow waypoints, navigating the track smoothly and with decision-making ability to avoid obstacles.
+- **Player control via Unity Input System**: Fully supports Unity’s default input system, offering responsive control over your vehicle.
 
-## DEMO VIDEO
+## Demo Video
 
-CHECK OUT THE GAMEPLAY DEMO VIDEO SHOWCASING AI CARS RACING WITH OBSTACLE DETECTION AND AVOIDING COLLISIONS:
+Check out the gameplay demo video showcasing AI cars racing with obstacle detection and avoiding collisions:
 
-[**WATCH DEMO VIDEO**](https://github.com/user-attachments/assets/65f1bda5-95f5-4dae-9c93-3a76336b296e)
+[**Watch Demo Video**](https://github.com/user-attachments/assets/65f1bda5-95f5-4dae-9c93-3a76336b296e)
 
-## SCREENSHOTS
+## Features
 
-HERE ARE SOME SCREENSHOTS OF THE VEHICLES AND THE ENVIRONMENT SETUP:
+- **Wheel collider-based vehicle physics**: Accurate vehicle dynamics using Unity's built-in wheel colliders.
+- **Drifting and boosting mechanics**: Control the car's drift behavior and apply speed boosts during gameplay.
+- **AI-controlled vehicles with obstacle detection & avoidance**: AI vehicles intelligently navigate the environment, detecting and avoiding obstacles in their path, making the race more dynamic and unpredictable.
+- **AI waypoints & reverse handling**: AI-controlled vehicles follow waypoints, with the ability to reverse if stuck, avoid obstacles, and reorient themselves dynamically.
+- **Player input via Unity Input System**: Seamlessly integrate with Unity’s default input system for responsive player control.
 
-![Car 1](https://github.com/user-attachments/assets/91397688-a49c-4e50-bf50-d832dd0335b2)
-![Car 2](https://github.com/user-attachments/assets/768ac8a1-fb40-4f90-ad2b-606d6d78a671)
-![Car 3](https://github.com/user-attachments/assets/3a9baa4c-f17b-48d2-bca3-9bd5f7942ccd)
+## Installation
 
-## FEATURES
+1. **Clone or download the repository**.
+2. **Import the script, vehicle models, and assets** into your Unity project.
+3. **Set up the vehicle GameObject** with wheel colliders and attach the vehicle controller script.
+4. **Attach the AIControl script to the AI vehicle** and link the SplineComputer (track path) and other necessary references in the Inspector.
+5. **Configure the AI waypoints, obstacle layers, and sensor distances** as needed for your scene.
+6. **Set up the vehicle models and environment to match your scene**.
 
-- **WHEEL COLLIDER-BASED VEHICLE PHYSICS**: ACCURATE VEHICLE DYNAMICS USING UNITY'S BUILT-IN WHEEL COLLIDERS.
-- **DRIFTING AND BOOSTING MECHANICS**: CONTROL THE CAR'S DRIFT BEHAVIOR AND APPLY SPEED BOOSTS DURING GAMEPLAY.
-- **AI-CONTROLLED VEHICLES WITH OBSTACLE DETECTION & AVOIDANCE**: AI VEHICLES INTELLIGENTLY NAVIGATE THE ENVIRONMENT, DETECTING AND AVOIDING OBSTACLES IN THEIR PATH, MAKING THE RACE MORE DYNAMIC AND UNPREDICTABLE.
-- **AI WAYPOINTS & REVERSE HANDLING**: AI-CONTROLLED VEHICLES FOLLOW WAYPOINTS, WITH THE ABILITY TO REVERSE IF STUCK, AVOID OBSTACLES, AND REORIENT THEMSELVES DYNAMICALLY.
-- **PLAYER INPUT VIA UNITY INPUT SYSTEM**: SEAMLESSLY INTEGRATE WITH UNITY’S DEFAULT INPUT SYSTEM FOR RESPONSIVE PLAYER CONTROL.
+## Configuration
 
-## INSTALLATION
+The **VehicleController** and **AIControl** scripts come with a variety of customizable parameters to suit different types of vehicles and gameplay styles. Here are some of the key configuration options:
 
-1. **CLONE OR DOWNLOAD THE REPOSITORY**.
-2. **IMPORT THE SCRIPT, VEHICLE MODELS, AND ASSETS** INTO YOUR UNITY PROJECT.
-3. **SET UP THE VEHICLE GAMEOBJECT** WITH WHEEL COLLIDERS AND ATTACH THE VEHICLE CONTROLLER SCRIPT.
-4. **ATTACH THE AICONTROL SCRIPT TO THE AI VEHICLE** AND LINK THE SPLINECOMPUTER (TRACK PATH) AND OTHER NECESSARY REFERENCES IN THE INSPECTOR.
-5. **CONFIGURE THE AI WAYPOINTS, OBSTACLE LAYERS, AND SENSOR DISTANCES** AS NEEDED FOR YOUR SCENE.
-6. **SET UP THE VEHICLE MODELS AND ENVIRONMENT TO MATCH YOUR SCENE**.
+### Vehicle Controller Configuration
+- **Max speed** (`maxSpeed`): The top speed the vehicle can reach (in units per second).
+- **Acceleration** (`acceleration`): How quickly the vehicle accelerates to its max speed.
+- **Deceleration** (`deceleration`): How quickly the vehicle slows down when the throttle is released or when braking is applied.
+- **Steering sensitivity** (`steeringSensitivity`): Adjusts how sensitive the steering is when turning.
+- **Traction control** (`tractionControl`): A multiplier affecting the grip of the vehicle’s tires.
 
-## CONFIGURATION
+### AI Control Configuration
+- **Target layer** (`targetLayer`): Defines the layers that the AI will detect for obstacles (e.g., walls, other cars).
+- **Sensor length** (`sensorLength`): Determines how far the AI can "see" when scanning for obstacles.
+- **Side sensor distance** (`sideSensorDistance`): How far the side sensors extend from the AI vehicle for collision detection.
+- **Side sensor angle** (`sideSensorAngle`): The angle at which side sensors scan for obstacles.
+- **Sensor center offset** (`sensorCenterOffset`): Offset from the center of the vehicle where the front and side sensors are located.
 
-THE **VEHICLECONTROLLER** AND **AICONTROL** SCRIPTS COME WITH A VARIETY OF CUSTOMIZABLE PARAMETERS TO SUIT DIFFERENT TYPES OF VEHICLES AND GAMEPLAY STYLES. HERE ARE SOME OF THE KEY CONFIGURATION OPTIONS:
+### Additional Settings
+- **Waypoint radius** (`waypointRadius`): The radius around a waypoint within which the AI will start turning towards the next waypoint.
+- **AI max speed** (`aiMaxSpeed`): The top speed of AI-controlled vehicles.
+- **Obstacle detection range** (`obstacleDetectionRange`): The range at which the AI will detect and react to obstacles.
+- **Obstacle avoidance sensitivity** (`obstacleAvoidanceSensitivity`): How sensitive the AI is to detected obstacles.
 
-### VEHICLE CONTROLLER CONFIGURATION
-- **MAX SPEED** (`maxSpeed`): THE TOP SPEED THE VEHICLE CAN REACH (IN UNITS PER SECOND).
-- **ACCELERATION** (`acceleration`): HOW QUICKLY THE VEHICLE ACCELERATES TO ITS MAX SPEED.
-- **DECELERATION** (`deceleration`): HOW QUICKLY THE VEHICLE SLOWS DOWN WHEN THE THROTTLE IS RELEASED OR WHEN BRAKING IS APPLIED.
-- **STEERING SENSITIVITY** (`steeringSensitivity`): ADJUSTS HOW SENSITIVE THE STEERING IS WHEN TURNING.
-- **TRACTION CONTROL** (`tractionControl`): A MULTIPLIER AFFECTING THE GRIP OF THE VEHICLE’S TIRES.
+## Example Setup
 
-### AI CONTROL CONFIGURATION
-- **TARGET LAYER** (`targetLayer`): DEFINES THE LAYERS THAT THE AI WILL DETECT FOR OBSTACLES (E.G., WALLS, OTHER CARS).
-- **SENSOR LENGTH** (`sensorLength`): DETERMINES HOW FAR THE AI CAN "SEE" WHEN SCANNING FOR OBSTACLES.
-- **SIDE SENSOR DISTANCE** (`sideSensorDistance`): HOW FAR THE SIDE SENSORS EXTEND FROM THE AI VEHICLE FOR COLLISION DETECTION.
-- **SIDE SENSOR ANGLE** (`sideSensorAngle`): THE ANGLE AT WHICH SIDE SENSORS SCAN FOR OBSTACLES.
-- **SENSOR CENTER OFFSET** (`sensorCenterOffset`): OFFSET FROM THE CENTER OF THE VEHICLE WHERE THE FRONT AND SIDE SENSORS ARE LOCATED.
+### To set up the AI control with waypoints and obstacle avoidance:
 
-### ADDITIONAL SETTINGS
-- **WAYPOINT RADIUS** (`waypointRadius`): THE RADIUS AROUND A WAYPOINT WITHIN WHICH THE AI WILL START TURNING TOWARDS THE NEXT WAYPOINT.
-- **AI MAX SPEED** (`aiMaxSpeed`): THE TOP SPEED OF AI-CONTROLLED VEHICLES.
-- **OBSTACLE DETECTION RANGE** (`obstacleDetectionRange`): THE RANGE AT WHICH THE AI WILL DETECT AND REACT TO OBSTACLES.
-- **OBSTACLE AVOIDANCE SENSITIVITY** (`obstacleAvoidanceSensitivity`): HOW SENSITIVE THE AI IS TO DETECTED OBSTACLES.
+1. **Assign the AIControl script**: Attach the AIControl script to the AI-controlled vehicle.
+2. **Connect the SplineComputer**: In the Inspector, link the SplineComputer component that defines the race track path.
+3. **Adjust sensor settings**: Fine-tune the sensor length, distance, and angle to make the AI react appropriately to obstacles in your scene.
+4. **Configure AI waypoints**: Set up a series of waypoints along the track for the AI to follow.
 
-## EXAMPLE SETUP
-
-### TO SET UP THE AI CONTROL WITH WAYPOINTS AND OBSTACLE AVOIDANCE:
-
-1. **ASSIGN THE AICONTROL SCRIPT**: ATTACH THE AICONTROL SCRIPT TO THE AI-CONTROLLED VEHICLE.
-2. **CONNECT THE SPLINECOMPUTER**: IN THE INSPECTOR, LINK THE SPLINECOMPUTER COMPONENT THAT DEFINES THE RACE TRACK PATH.
-3. **ADJUST SENSOR SETTINGS**: FINE-TUNE THE SENSOR LENGTH, DISTANCE, AND ANGLE TO MAKE THE AI REACT APPROPRIATELY TO OBSTACLES IN YOUR SCENE.
-4. **CONFIGURE AI WAYPOINTS**: SET UP A SERIES OF WAYPOINTS ALONG THE TRACK FOR THE AI TO FOLLOW.
-
-FEEL FREE TO CUSTOMIZE AND EXPAND THE VEHICLE CONTROLLER FOR YOUR OWN UNITY PROJECTS. WHETHER YOU'RE BUILDING A RACING GAME, A DRIVING SIMULATOR, OR JUST TESTING VEHICLE DYNAMICS, THIS CONTROLLER PROVIDES A ROBUST SOLUTION WITH BOTH PLAYER AND AI VEHICLE SUPPORT.
-------------------
-
+Feel free to customize and expand the vehicle controller for your own Unity projects. Whether you're building a racing game, a driving simulator, or just testing vehicle dynamics, this controller provides a robust solution with both player and AI vehicle support.
