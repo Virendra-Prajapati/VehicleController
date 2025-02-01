@@ -26,6 +26,8 @@ Check out the gameplay demo video showcasing AI cars racing with obstacle detect
 - **AI waypoints & reverse handling**: AI-controlled vehicles follow waypoints, with the ability to reverse if stuck, avoid obstacles, and reorient themselves dynamically.
 - **Player input via Unity Input System**: Seamlessly integrate with Unity’s default input system for responsive player control.
 
+[** AI Obstacle Tracing **](https://github.com/user-attachments/assets/5a4651bd-6bd4-43c7-80b2-b99584f91c8e)
+
 ## Installation
 
 1. **Clone or download the repository**.
